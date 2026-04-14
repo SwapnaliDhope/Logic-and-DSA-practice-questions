@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-class array
+class MinOfarray
 {
     public static void main(String []s)
     {
@@ -8,17 +8,25 @@ class array
      System.out.println("Enter size of an array");
      int n=sc.nextInt();
      int arr[]=new int[n];
-    System.out.print("Enter array :");
+        System.out.print("Enter array :");
 
      for(int i=0;i<n;i++)
      {
         arr[i]=sc.nextInt();
 
      }
-     System.out.println("Here is your array");
-     for(int i=0;i<n;i++)
+      int min=arr[0];
+     System.out.println("Here is your minimum of array :");
+     for(int i=0;i<arr.length;i++)
      {
-        System.out.println(arr[i]);
+       if(arr[i]<min)
+       {
+        min=arr[i];
+       }
+
      }
+      System.out.println(min);
+           
+
     }
 }

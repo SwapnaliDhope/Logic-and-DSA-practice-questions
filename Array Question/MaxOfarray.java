@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-class array
+class MaxOfarray
 {
     public static void main(String []s)
     {
@@ -9,16 +9,21 @@ class array
      int n=sc.nextInt();
      int arr[]=new int[n];
     System.out.print("Enter array :");
-
      for(int i=0;i<n;i++)
      {
         arr[i]=sc.nextInt();
 
      }
-     System.out.println("Here is your array");
+      int max=arr[0];
+     System.out.println("Here is your max of array :");
      for(int i=0;i<n;i++)
      {
-        System.out.println(arr[i]);
+       if(max<arr[i])
+       {
+        max=arr[i];
+       }
      }
+            System.out.println(max);
+
     }
 }
